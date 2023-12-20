@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 login-form">
+				<form action="profile.html">
+					<h2>Login</h2>
+				    
+					<div class="form-group">
+						<input type="text" class="form-control"  id="username" name="Username or Email" placeholder="Username or Email" required>
+					</div>
+					<div class="form-group">
+						<input type="password" name="Password" class="form-control" placeholder="Password" required>
+					</div>
+					<div class="form-group form-check">
+						<input class="form-check-input" type="checkbox" id="remember" name="remember">
+						<label for="remember" class="form-check-label">Remember me</label>
+					</div>
+					<input type="submit" class="btn btn-primary mt-4 mb-2" onclick="saveInput()" value="submit">
+					
+					<p>Don't have an account? <a href="register.html">Sign up</a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="./JS/login.js"></script>
+</body>
+</html>

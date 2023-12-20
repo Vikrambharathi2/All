@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS for the popup -->
+    <style>
+        /* Customize the modal */
+        .modal-content {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Popup</button>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Input Popup</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputValue1">Field 1:</label>
+                        <input type="text" class="form-control" id="inputValue1">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue2">Field 2:</label>
+                        <input type="text" class="form-control" id="inputValue2">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue3">Field 3:</label>
+                        <input type="text" class="form-control" id="inputValue3">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue4">Field 4:</label>
+                        <input type="text" class="form-control" id="inputValue4">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue5">Field 5:</label>
+                        <input type="text" class="form-control" id="inputValue5">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue6">Field 6:</label>
+                        <input type="text" class="form-control" id="inputValue6">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputValue7">Field 7:</label>
+                        <input type="text" class="form-control" id="inputValue7">
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="submitInput()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to handle the submission of the input
+        function submitInput() {
+            const inputValues = [];
+            for (let i = 1; i <= 7; i++) {
+                inputValues.push(document.getElementById(`inputValue${i}`).value);
+            }
+            alert(`You entered: ${inputValues.join(', ')}`);
+            $('#myModal').modal('hide'); // Close the modal
+        }
+    </script>
+</body>
+</html>

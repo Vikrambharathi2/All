@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Page</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/register.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 login-form">
+				<form action="profile.html" >
+					<h2>Sign Up</h2>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Username or Email" required name="username">
+					</div>   
+					<div class="form-group">
+						<input id="password" type="password" class="form-control" placeholder="Password" required name="password">
+					</div>
+					<div class="form-group">
+						<input id="confirm-password" type="password" class="form-control" placeholder="Re-type Password" required name="conformpassword">
+					</div>
+                    <div class="form-group form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" name="remember"> Remember me
+						</label>
+					</div>
+					<input type="submit" class="btn btn-primary" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		   function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            
+            if (password != confirmPassword) {
+                document.getElementById("confirm-password").setCustomValidity("Passwords do not match");
+            } else {
+                document.getElementById("confirm-password").setCustomValidity("");
+            }
+        }
+        document.getElementById("password").addEventListener("change", validatePassword);
+        document.getElementById("confirm-password").addEventListener("change", validatePassword);
+	</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
